@@ -9,6 +9,7 @@ st.markdown("""
 body {
             background-color: #007EA7;
             font-family: Arial, sans-serif;
+""")
 
 # Sidebar for menus
 with st.sidebar:
