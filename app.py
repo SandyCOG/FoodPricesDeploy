@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 #import matplotlib.pyplot as plt
 
-# Set Page Configuration for a centered Layout
-st.set_page_config(layout="centered")
 
 # Configure page background color and font
 st.markdown("""
@@ -14,6 +12,9 @@ body {
 }
 </style>
 """, unsafe_allow_html=True)
+
+# Set Page Configuration for a centered Layout
+st.set_page_config(layout="centered")
 
 # Create a session state to manage page navigation
 class SessionState:
