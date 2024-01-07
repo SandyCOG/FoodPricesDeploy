@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # Set Page Configuration for a centered Layout
 st.set_page_config(layout="centered")
