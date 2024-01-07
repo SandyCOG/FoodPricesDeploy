@@ -14,7 +14,7 @@ body {
 """, unsafe_allow_html=True)
 
 # Set Page Configuration for a centered Layout
-st.set_page_config(layout="centered")
+st.set_page_config(layout="wide")
 
 # Create a session state to manage page navigation
 class SessionState:
