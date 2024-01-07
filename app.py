@@ -13,4 +13,4 @@ body {
 
 # Sidebar for menus
 with st.sidebar:
-st.title("Menu")
+            st.title("Menu")
