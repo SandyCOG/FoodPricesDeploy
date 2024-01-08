@@ -15,6 +15,7 @@ body {
 }
 </style>
 """, unsafe_allow_html=True)
+
 # Create a session state to manage page navigation
 class SessionState:
     def __init__(self):
@@ -22,6 +23,17 @@ class SessionState:
 
 # Initialize session state
 state = SessionState()
+
+# Sidebar for page navigation
+with st.sidebar:
+    st.title("Navigation")
+    pages = ["Introduction", "Authors", "Charts", "Prediction", "Feedback"]
+    selected_page = st.radio("Go to:", pages, index=pages.index(state.page))
+    go_button = st.button("Go")
+
+# Handle page navigation
+if go_button:
+    state.page = selected_page
 
 # Introduction Page
 if state.page == "Introduction":
@@ -89,12 +101,7 @@ elif state.page == "Feedback":
     st.header("Repository Link")
     st.write("Add your repository link here.")
 
-# Sidebar for page navigation
-with st.sidebar:
-    st.title("Navigation")
-    pages = ["Introduction", "Authors", "Charts", "Prediction", "Feedback"]
-    selected_page = st.radio("Go to:", pages, index=pages.index(state.page))
 
-# Update page in the session state
-state.page = selected_page
+
+
 
