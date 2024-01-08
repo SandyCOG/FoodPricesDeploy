@@ -1,3 +1,5 @@
+pip install -r requirements.txt
+
 import streamlit as st   #imports streamlit library
 import pandas as pd  #imports pandas library
 import matplotlib.plt as plt #imports matplotlib
