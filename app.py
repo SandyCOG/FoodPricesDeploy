@@ -47,11 +47,32 @@ if state.page == "Introduction":
 
 # Authors Page
 elif state.page == "Authors":
-    st.title("Food Prediction Model")
+    st.title("Authors")
 
-    # Page content
-    st.header("Authors")
-    st.write("Author information goes here.")
+    # Sample author data
+    authors_data = [
+        {"name": "Author 1", "image": "url_to_image_1", "bio": "Bio of Author 1", "link": "https://linkedin.com/author1"},
+        {"name": "Author 2", "image": "url_to_image_2", "bio": "Bio of Author 2", "link": "https://linkedin.com/author2"},
+        # Add more authors as needed
+    ]
+
+    # Display authors in a 3 by 2 grid
+    for i in range(0, len(authors_data), 2):
+        col1, col2 = st.columns(2)
+        
+        # Column 1
+        with col1:
+            st.image(authors_data[i]["image"], width=150, caption=authors_data[i]["name"])
+            st.write(authors_data[i]["bio"])
+            st.markdown(f"[{authors_data[i]['name']}'s LinkedIn]({authors_data[i]['link']})")
+
+        # Column 2
+        with col2:
+            # Check if there is a second author in the row
+            if i + 1 < len(authors_data):
+                st.image(authors_data[i + 1]["image"], width=150, caption=authors_data[i + 1]["name"])
+                st.write(authors_data[i + 1]["bio"])
+                st.markdown(f"[{authors_data[i + 1]['name']}'s LinkedIn]({authors_data[i + 1]['link']})")
 
 # Charts Page
 elif state.page == "Charts":
