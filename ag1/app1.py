@@ -2,7 +2,7 @@ pip install -r requirements.txt
 
 import streamlit as st   #imports streamlit library
 import pandas as pd  #imports pandas library
-import matplotlib as plt #imports matplotlib
+import matplotlib.pyplot as plt #imports matplotlib
 
 #set page configuration for centered layout
 st.set_page_config(layout="wide", page_title="Your Page Title", page_icon="🌐", theme="wide")
