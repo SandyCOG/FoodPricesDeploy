@@ -1,6 +1,8 @@
+pip install matplotlib
+
 import streamlit as st   #imports streamlit library
 import pandas as pd  #imports pandas library
-import plotly.express as px #imports plotly
+import matplotlib.pyplot as plt
 from streamlit.components.v1 import html 
 
 #set page configuration for centered layout
