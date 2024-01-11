@@ -1,6 +1,7 @@
 import streamlit as st   #imports streamlit library
 import pandas as pd  #imports pandas library
 import plotly.express as px #imports plotly
+from streamlit.components.v1 import html 
 
 #set page configuration for centered layout
 st.set_page_config(layout="wide", page_title="Your Page Title", page_icon="🌐", theme="wide")
